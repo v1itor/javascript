@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Seletor de cores</title>
+    <script>
+        function mudarcor() {
+            r = document.getElementById("r").value
+            g = document.getElementById("g").value
+            b = document.getElementById("b").value
+            var chosen = "rgb("+r+", "+g+", "+b+")"
+            document.body.style.backgroundColor = chosen
+            document.getElementById("result").value = chosen
+        }
+    </script>
+</head>
+<body>
+    <h1>Seletor de cor</h1>
+    Vermelho <input onclick="mudarcor()" type="range" max="255" id="r"/> <br />
+    Verde <input onclick="mudarcor()" type="range" max="255" id="g"/> <br />
+    Azul <input onclick="mudarcor()" type="range" max="255" id="b"/> <br />
+    <h1>RGB</h1>
+    <input type="text" id="result" disabled>
+</body>
+</html>
